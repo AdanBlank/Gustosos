@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8"> <!--Codifica de manera correcta las palabras-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gustacho's</title>
+    <script src="https://kit.fontawesome.com/93690f13cb.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header class="encabezado">
+        <div class="contenedor-navegacion">
+            <div class="contenido-navegacion contenedor">
+                <div class="logo">
+                    <img data-src="assets/img/imagen-principal.png" alt="logo">
+                </div>
+                <div class="lista-menu">
+                    <nav class="barra-navegacion">
+                        <a href="#">Inicio</a>
+                        <a href="#">Nuestros platos</a>
+                        <a href="#">Influencers</a>
+                        <a href="#">Ofertas</a>
+                    </nav>
+                </div>
+                <nav class="navegacion ocultar">
+                    <a href="#">Inicio</a>
+                    <a href="#">Sobre nosotros</a>
+                    <a href="#">Influencers</a>
+                    <a href="#">Reseñas</a>
+                </nav>
+                <div class="hamburguesa">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+        <div class="contenido-header">
+            <div class="contendor-encabezado">
+                <div class="texto-encabezado">
+                    <h2>Bienvenido a Gustoso's </h2>
+                    <!--<a href="#" class="btn bordes">Nuestro Menu</a>-->
+                    <div class="contenedor2">
+                    <button id="boton" class="btn bordes">Nuestro Menu</button>
+                    <div class="overlay" id="overlay"></div>
+                    <div id="emergente" class="div-emergente ocultar">
+                        <span class="cerrar ocultar" id="cerrar">&times;</span>
+                        <div class="slide">
+                        <img id='imagen' data-src="assets/img/menu/menu1.jpg" alt="menu1">
+                        <div class="zonab">
+                            <a href="#" class="circular bordes" onclick="cambiarImagen('assets/img/menu/menu1.jpg')">1</a>
+                            <a href="#" class="circular bordes" onclick="cambiarImagen('assets/img/menu/menu2.jpg')">2</a>
+                            <a href="#" class="circular bordes" onclick="cambiarImagen('assets/img/menu/menu3.jpg')">3</a>
+                        </div>
+                        </div>
+                    </div>
+                    </div>    
+                </div>
+            </div>
+                <div class="video-container">
+                    <video src="assets/video/video1.mp4" autoplay muted loop></video>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="nosotrosd">
+    <div class="contenedor-nosotros contenedor">
+        <div class="texto-nosotros">
+            <h2 class="bienvenida">Bienvenido a </h2>
+            <h1>GUSTOSOS!</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi mollitia, dignissimos consequatur omnis
+                numquam cupiditate corrupti blanditiis asperiores ut architecto sint dolor quaerat labore? Ab ullam
+                inventore itaque temporibus adipisci!
+                ajajaj</p>
+            <a href="#" class="btn btn-amarillo">Contactar</a>
+        </div>
+        <div class="imagen-nosotros">
+            <div class="imagen01">
+                <img data-src="assets/img/broaster.avif" alt=" mujer comiendo pizza">
+            </div>
+            <div class="imagen02">
+                <img data-src="assets/img/hamburguesa-mujer.avif" alt="mujeres comiendo pizza">
+                <img data-src="assets/img/alitas.jpg" alt="plato con pasta">
+            </div>
+        </div>
+    </div>
+    </section>
+    <section class="menu contenedor">
+        <h2 class="texto-platillos">Platillos Populares</h2>
+        <div class="botones-platillos">
+            <button class="comida1 btn btn-verde">Todos</button>
+            <button class="comida2 btn btn-verde">Hamburguesas</button>
+            <button class="comida3 btn btn-verde">Broaster</button>
+            <button class="comida4 btn btn-verde">Alitas</button>
+        </div>
+        <div class="platillos">
+            <div class="platillo" data-platillo="ensalada">
+                <img data-src="assets/img/plato1.jpg" alt="ensalada">
+                <h2>Quinoa</h2>
+                <p>Quinoa,cerezas,tomate y aceitunas</p>
+                <div class="precio">
+                    <p>$40.00</p>
+                    <button><i class="fa-solid fa-basket-shopping"></i></button>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="ensalada">
+                <img data-src="assets/img/plato1.jpg" alt="ensalada">
+                <h2>Quinoa</h2>
+                <p>Quinoa,cerezas,tomate y aceitunas</p>
+                <div class="precio">
+                    <p>$40.00</p>
+                    <button><i class="fa-solid fa-basket-shopping"></i></button>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="ensalada">
+                <img data-src="assets/img/plato1.jpg" alt="ensalada">
+                <h2>Quinoa</h2>
+                <p>Quinoa,cerezas,tomate y aceitunas</p>
+                <div class="precio">
+                    <p>$40.00</p>
+                    <button><i class="fa-solid fa-basket-shopping"></i></button>
+                </div>
+            </div>
+            <!--Pastas-->
+            <div class="platillo" data-platillo="pasta">
+                <img data-src="assets/img/plato2.jpg" alt="pasta">
+                <h2>Alitas</h2>
+                <p>Quinoa,cerezas,tomate y aceitunas</p>
+                <div class="precio">
+                    <p>$40.00</p>
+                    <button>comprar</button>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="pasta">
+                <img data-src="assets/img/plato2.jpg" alt="pasta">
+                <h2>Alitas</h2>
+                <p>Quinoa,cerezas,tomate y aceitunas</p>
+                <div class="precio">
+                    <p>$40.00</p>
+                    <button>comprar</button>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="pasta">
+                <img data-src="assets/img/plato2.jpg" alt="pasta">
+                <h2>Alitas</h2>
+                <p>Quinoa,cerezas,tomate y aceitunas</p>
+                <div class="precio">
+                    <p>$40.00</p>
+                    <button>comprar</button>
+                </div>
+            </div>
+            <!--pizza-->
+            <div class="platillo" data-platillo="pizza">
+                <img data-src="assets/img/plato3.jpg" alt="pizza">
+                <h2>Pollo Broaster</h2>
+                <p>Quinoa,cerezas,tomate y aceitunas</p>
+                <div class="precio">
+                    <p>$40.00</p>
+                    <button>comprar</button>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="pizza">
+                <img data-src="assets/img/plato3.jpg" alt="pizza">
+                <h2>Pollo Broaster</h2>
+                <p>Quinoa,cerezas,tomate y aceitunas</p>
+                <div class="precio">
+                    <p>$40.00</p>
+                    <button>comprar</button>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="pizza">
+                <img data-src="assets/img/plato3.jpg" alt="pizza">
+                <h2>Pollo Broaster</h2>
+                <p>Quinoa,cerezas,tomate y aceitunas</p>
+                <div class="precio">
+                    <p>$40.00</p>
+                    <button>comprar</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <div class="separador">
+        <div class="contenido-separador contenedor">
+            <h2>LA MEJOR OPCION EN FAST FOOD</h2>
+            <p>Empieza el dia VIENDO NUESTROS NUEVOS REELS EN IG O FB</p>
+            <a href="#" class="btn btn-rojo">Ver Ahora</a>
+        </div>
+    </div>
+    <section class="chef contenedor">
+        <h2>Chef ejecutivo</h2>
+        <div class="contenido-chef">
+            <div class="texto-chef">
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non perferendis expedita officiis
+                    repellendus illum, ratione earum delectus molestias possimus! Culpa, et. Dolorem veniam explicabo
+                    amet esse voluptatibus praesentium corrupti nobis?
+                </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus corporis dolores eveniet
+                    vitae,
+                    natus tempora recusandae hic laborum error ducimus repellat, laudantium temporibus tenetur totam
+                    sint
+                    consequuntur eligendi! Asperiores, ad.</p>
+                <a href="#" class="btn btn-naranja">Leer Bíografia</a>
+            </div>
+            <div class="imagen-chef">
+                <img data-src="/assets/img/chefcito.jpg" alt="fotografia del chef">
+            </div>
+        </div>
+    </section>
+
+    <div class="formulario-contacto contenedor">
+
+        <div class="informacion-contacto">
+            <h3>Contactanos</h3>
+            <p><i class="fas fa-map-marker-alt"></i>Carrtera Baños termnales</p>
+            <p><i class="fas fa-envelope"></i> jhosuaa@correo.com</p>
+            <p><i class="fas fa-phone-alt"></i>tu numero</p>
+            <div class="redes-sociales">
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-twitter-square"></i>
+                <i class="fab fa-instagram"></i>
+            </div>
+        </div>
+
+        <form class="formulario">
+            <div class="input-formulario">
+                <label for="nombre">Nombre</label>
+                <input type="text" placeholder="Pedro" id="nombre">
+            </div>
+            <div class="input-formulario">
+                <label for="apellidos">Apellido</label>
+                <input type="text" placeholder="Pedro" id="apellidos">
+            </div>
+            <div class="input-formulario">
+                <label for="correo">Correo</label>
+                <input type="email" placeholder="ejemplo@ejemplo.com" id="correo">
+            </div>
+            <div class="input-formulario">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" placeholder="+90 543 779 9410" id="telefono">
+            </div>
+            <div class="input-formulario">
+                <label for="mensaje">Mensaje</label>
+                <textarea></textarea>
+            </div>
+            <div class="btn-formulario">
+                <input type="submit" class="btn btn-verde" value="Enviar">
+            </div>
+        </form>
+    </div>
+    <div class="pie-pagina ">
+        <div class="contenedor-piepagina contenedor">
+            <div class="info">
+                <h3>Dirección</h3>
+                <p>local de los baños</p>
+            </div>
+            <div class="info">
+                <h3>Días especiales</h3>
+                <p>Sabados y Jueves 7am - 11pm</p>
+                <p>+3123410921</p>
+            </div>
+            <div class="info">
+                <h3>Horarios</h3>
+                <p>Lunes - Domingo 7am - 11pm</p>
+                <div class="redes-sociales redes-pie">
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-twitter-square"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+            <div class="info">
+                <h3>Noticias</h3>
+                <p>suscribete para recibir más noticias</p>
+                <input type="email" placeholder="Tu correo">
+                <input type="submit" class="btn btn-verde" value="Suscribirse">
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>Derechos reservados por el editor de esta Pagina Web amateur ALV</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+
+
+</html>
