@@ -14,6 +14,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 
 <body>
@@ -23,13 +24,28 @@
                 <div class="logo">
                     <img data-src="assets/img/imagen-principal.png" alt="logo">
                 </div>
-                <div class="lista-menu">
-                    <nav class="barra-navegacion">
-                        <a href="#">Inicio</a>
-                        <a href="#">Nuestros platos</a>
-                        <a href="#">Influencers</a>
-                        <a href="#">Ofertas</a>
-                    </nav>
+                <div class="menu-bar">
+                    <ul>
+                        <li><a href="#">INICIO<i class="fas fa-caret-down"></i></a>
+                            <div class="dropdown-menu">
+                                <ul>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#">Iniciar sesion</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li><a href="#">SOBRE NOSOTROS</a></li>
+                        <li><a href="#">REDES SOCIALES <i class="fas fa-caret-down"></i></a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a href="https://www.facebook.com/share/1nbRfuM3TVtk2ti8/?mibextid=qi2Omg" target="_blank"><i class="fab fa-facebook-square"></i> FACEBOOK</a></li>                    
+                                
+                                <li><a href="https://www.instagram.com/gustoso_moyobamba?igsh=MTh2c3hrZnR0d2p1ag==" target="_blank"><i class="fab fa-instagram"></i> INSTAGRAM</a></li>
+                            </ul>
+                        </div>
+                        </li>
+                    </ul>
                 </div>
                 <nav class="navegacion ocultar">
                     <a href="#">Inicio</a>
@@ -43,7 +59,7 @@
             </div>
         </div>
         <div class="contenido-header">
-            <div class="contendor-encabezado">
+            <div class="contenedor-encabezado">
                 <div class="texto-encabezado">
                     <h2>Bienvenido a Gustoso's </h2>
                     <!--<a href="#" class="btn bordes">Nuestro Menu</a>-->
