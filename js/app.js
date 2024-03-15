@@ -1,5 +1,6 @@
 const menu = document.querySelector('.hamburguesa');
 const navegacion = document.querySelector('.navegacion');
+const contenido=document.querySelector('.contenido-header')
 const imagenes = document.querySelectorAll('img');
 const btnTodos = document.querySelector('.comida1');
 const btnEnsaladas = document.querySelector('.comida2');
@@ -11,6 +12,9 @@ const cerrar = document.getElementById('cerrar');
 const emergente= document.getElementById('emergente');
 const overlay=document.getElementById('overlay')
 const circulares=document.querySelector('.circular');
+const enlace = document.getElementById('inicio');
+const subMenu = document.getElementById('divIni');
+
 
 
 
@@ -86,6 +90,7 @@ cerrar.addEventListener('click', function() {
     emergente.style.display = 'none'; // Ocultar el fondo opaco
     cerrar.style.display = "none"
     overlay.style.display = "none";
+    contenido.style.zIndex = "0";
 });
 
 
@@ -93,11 +98,18 @@ boton.addEventListener("click", function() {
     emergente.style.display = "block";
     cerrar.style.display = "block"
     overlay.style.display = "block";
+    contenido.style.zIndex = "1";
 });
 
 function cambiarImagen(rutaImagen) {
     document.getElementById('imagen').src = rutaImagen;
 }
+
+
+
+
+
+
 
 /*PLATILLOS
  */
