@@ -1,3 +1,4 @@
+
 /*custom propierties,variables,creamos propiedades y le damos un valor*/
 
 :root {
@@ -60,7 +61,7 @@ body {
 .lista-menu {
     display: block;
     color: var(--blanco);
-    
+    position: relative;
 }
 
 
@@ -85,7 +86,77 @@ body {
 
 }
 
+.menu-bar{
+    display: flex;
+    position: relative;
+    justify-content: space-between; /* Coloca la imagen a la izquierda y el menú a la derecha */
+    align-items: center;
+    height: 100%;
+    padding: 0; /* Ajusta el espaciado según sea necesario */
+    max-width: 100%;
+    z-index: 5;
 
+}
+
+.menu-bar ul{
+    list-style: none;
+    display: inline-flex;
+
+}
+.menu-bar ul li{
+    padding: 10px 30px;
+    position: relative;
+}
+.menu-bar ul li a{
+    font-size: 3.5rem;
+    color: var(--blanco);
+    text-decoration: none;
+    font-family: var(--personalizado);
+    transition: all .3s;
+
+}
+.menu-bar ul li:hover {
+    color: yellow;
+}
+.fas{
+    float: right;
+    margin-left: 10px;
+    padding-top: 3px;
+}
+
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    background-color: var(--amarillo);
+    z-index: 6;
+}
+
+
+.menu-bar ul li:hover .dropdown-menu{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 90%;
+    background-color: var(--rojo);
+}
+
+.menu-bar ul li:hover .dropdown-menu ul{
+    display:block;
+    margin:10px;
+}
+.menu-bar ul li:hover .dropdown-menu ul li{
+    width: 200px;
+    padding: 10px;
+}
+
+@media (max-width:768px){
+    .menu-bar{
+        display: none;
+    }
+
+}
 /*
 .caja {
     width: 300px;
@@ -145,7 +216,7 @@ img {
 /*Encabezado*/
 .contenedor-navegacion {
     background-color: var(--naranja);
-    position: relative;
+    position:relative;
     z-index: 1;
 }
 
@@ -154,6 +225,8 @@ img {
     align-items: center;
     justify-content: space-between;
     height: 100px;
+    max-width: 100%;
+    margin-right: 15px;
 }
 
 .logo h2,
@@ -162,17 +235,10 @@ img {
 
 }
 
-.logo h2 {
-    font-size: 6rem;
-    color: var(--oscuro);
-    border: var(--oscuro) solid;
-    padding: 0.5rem;
-}
-
 .logo img{
-    width: 22rem;
+    width: 23rem;
     height: auto;
-    justify-content: right;
+    align-items: center;
 }
 
 
@@ -379,6 +445,7 @@ relative solo trabaja en relacion al conetedor padre.*/
 
 .contenido-header {
     position: relative;
+    z-index: 0;
 }
 
 .contenido-header::before {
@@ -415,7 +482,7 @@ relative solo trabaja en relacion al conetedor padre.*/
         transform: translateY(-50%); /* Centra verticalmente el contenedor */
         z-index: 3;
     }
-     
+
 
 }
 
@@ -487,24 +554,39 @@ relative solo trabaja en relacion al conetedor padre.*/
 }
 
 @media (max-width:768px){
-     .video-container{
+    .video-container{
         position: relative; /* Añade un posicionamiento relativo */
         width: 100%;
         height: 680px;
         object-fit: cover;
         z-index: -1; /* Establece un índice z más bajo para el video */
-     }
+    }
 
 }
 .cerrar {
     position: absolute;
+    text-align: center  ;
+    width: 22px;
+    border-color: var(--blanco);
+    border-width: 2rem;
+    background-color: var(--naranja);
+    color: white;
+    font-size: 2.5rem;
+    border-radius: 50%;
     top: 10px;
     right: 10px;
-    font-size: 20px;
     cursor: pointer;
     font-family: var(--titulos);
-    color: #000;
+    transition: ease-in-out;
     z-index: 12;
+}
+.cerrar:hover {
+    background-color: darkorange; /* Cambia el color de fondo al pasar por encima */
+    font-size: 3.2rem ;
+    width: 27px;
+    height: 27px;
+    text-align: center;
+
 }
 
 .div-emergente{
@@ -516,7 +598,7 @@ relative solo trabaja en relacion al conetedor padre.*/
     padding: 10px;
     border: 1px solid black;
     border-radius: 10px;
-    z-index: 10;
+    z-index: 15;
     width: auto; /* Ancho del contenedor */
     height: 700px;
     justify-content: center;
@@ -568,10 +650,10 @@ relative solo trabaja en relacion al conetedor padre.*/
     font-size: 1.5rem;
     font-family: var(--personalizado);
 }
- .circular :hover{
+.circular :hover{
     width: 40px;
     height: 40px;
- }
+}
 .zonab .bordes:hover{
     width: 35px; /* Ancho aumentado del círculo cuando se pasa el puntero */
     height: 35px; /* Alto aumentado del círculo cuando se pasa el puntero */
@@ -586,9 +668,13 @@ relative solo trabaja en relacion al conetedor padre.*/
 }
 .nosotrosd{
     padding-top: 5rem;
-    background: linear-gradient(to bottom, rgba(234, 19, 19, 0.347), rgba(214, 203, 0, 0.599)), url('../assets/img/nosotros.jpg');
-    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
-    background-position: center; /* Centra la imagen en el contenedor */
+    background: var(--naranja);
+    background-image: url('../assets/img/fondo6.jpg');
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    border: var(--naranja) solid;
+    border-width: 1.5rem;
 }
 
 /*Sobre nosotros*/
